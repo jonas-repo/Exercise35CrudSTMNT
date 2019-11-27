@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -65,11 +66,25 @@ public class ReadGeneralServlet extends HttpServlet {
 				
 				e.printStackTrace();
 			}
+			finally {
+				try 
+				{
+					stmnt.close();
+					conn.close();
+					rs.close();
+				} catch (Exception e) 
+				{
+					
+					e.printStackTrace();
+				}
+				
+			}
 		//4. open connections
 		//5. prepare statement
 		//6. execute sentence
 		//7. process output
 		//8. close connection
+			
 		
 	}
 

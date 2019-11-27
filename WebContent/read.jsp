@@ -8,9 +8,17 @@
 <link rel="Stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<h2>Read</h2>
+	<h2>Read all</h2>
 	<form method="post" action="Read">
 		<input type="submit" value="List of products" class="btn btn-info">
+	</form>
+	<br>
+	<h2>Read one</h2>
+	<form method="post" action="ReadOne" class="col-lg-6 col-md-6">
+		<label class="control-label" for="txtId">ID from product</label>
+		<input type="text" class="form-control" name="txtId" id="txtId">
+		<br>
+		<input type="submit" value="Search" class="btn btn-info">
 	</form>
 	
 	<!-- 
